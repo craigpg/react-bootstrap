@@ -23,9 +23,10 @@
     "release": "rollout",
     "start": "yarn --cwd www run develop",
     "tdd": "karma start",
-    "test": "npm run lint && npm run dtslint && npm run test-browser && npm run test-node",
+    "test": "npm run lint && npm run dtslint && npm run test-browser && npm run test-node && npm run test-types",
     "test-browser": "cross-env NODE_ENV=test karma start --single-run",
-    "test-node": "cross-env NODE_ENV=test-server mocha --require @babel/register test/server/*Spec.js"
+    "test-node": "cross-env NODE_ENV=test-server mocha --require @babel/register test/server/*Spec.js",
+    "test-types": "tsc --noEmit -p types"
   },
   "husky": {
     "hooks": {
