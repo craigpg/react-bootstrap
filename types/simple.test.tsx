@@ -168,11 +168,15 @@ import {
 <Form>
   <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="name@example.com" />
+    <Form.Control type="email" placeholder="name@example.com"
+      innerRef={React.createRef<HTMLInputElement>()}
+      onChange={(e: React.FormEvent<HTMLInputElement>) => { e }} />
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlSelect1">
     <Form.Label>Example select</Form.Label>
-    <Form.Control as="select">
+    <Form.Control as="select"
+      innerRef={React.createRef<HTMLSelectElement>()}
+      onChange={(e: React.FormEvent<HTMLSelectElement>) => { e }}>
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -192,7 +196,9 @@ import {
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlTextarea1">
     <Form.Label>Example textarea</Form.Label>
-    <Form.Control as="textarea" rows={3} />
+    <Form.Control as="textarea" rows={3}
+      innerRef={React.createRef<HTMLTextAreaElement>()}
+      onChange={(e: React.FormEvent<HTMLTextAreaElement>) => { e }} />
   </Form.Group>
   <Form.Group as={Row} controlId="exampleForm.HorizontalControl">
     <Form.Label column sm={2}>
@@ -265,16 +271,16 @@ import {
   <ListGroup.Item action>This one is a button</ListGroup.Item>
 </ListGroup>;
 
-<Modal show={false} onHide={() => {}}>
+<Modal show={false} onHide={() => { }}>
   <Modal.Header closeButton>
     <Modal.Title>Modal heading</Modal.Title>
   </Modal.Header>
   <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
   <Modal.Footer>
-    <Button variant="secondary" onClick={() => {}}>
+    <Button variant="secondary" onClick={() => { }}>
       Close
     </Button>
-    <Button variant="primary" onClick={() => {}}>
+    <Button variant="primary" onClick={() => { }}>
       Save Changes
     </Button>
   </Modal.Footer>
