@@ -2,7 +2,10 @@ import * as React from 'react';
 import Feedback from './Feedback';
 import { BsPrefixComponent } from './helpers';
 
-type FormControlElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+type FormControlElement =
+  | HTMLInputElement
+  | HTMLSelectElement
+  | HTMLTextAreaElement;
 
 export interface FormControlProps {
   innerRef?: React.LegacyRef<FormControlElement>;
@@ -20,7 +23,7 @@ export interface FormControlProps {
 
 declare class FormControl<
   As extends React.ElementType = 'input'
-  > extends BsPrefixComponent<As, FormControlProps> {
+> extends BsPrefixComponent<As, FormControlProps> {
   static Feedback: typeof Feedback;
 }
 
