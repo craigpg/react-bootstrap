@@ -6,7 +6,6 @@ import { BsPrefixComponent } from './helpers';
 
 interface FormLabelBaseProps {
   htmlFor?: string;
-  innerRef?: React.LegacyRef<this>;
   srOnly?: boolean;
 }
 

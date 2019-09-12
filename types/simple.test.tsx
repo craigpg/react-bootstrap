@@ -18,7 +18,12 @@ import {
   Dropdown,
   DropdownButton,
   Form,
+  FormCheck,
+  FormCheckInput,
+  FormCheckLabel,
   FormControl,
+  FormGroup,
+  FormLabel,
   InputGroup,
   ListGroup,
   Modal,
@@ -165,14 +170,26 @@ import {
   <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
 </DropdownButton>;
 
-<Form>
-  <Form.Group controlId="exampleForm.ControlInput1">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="name@example.com" />
+<Form ref={React.createRef<Form & HTMLFormElement>()}>
+  <Form.Group
+    ref={React.createRef<FormGroup & HTMLDivElement>()}
+    controlId="exampleForm.ControlInput1"
+  >
+    <Form.Label ref={React.createRef<FormLabel & HTMLLabelElement>()}>
+      Email address
+    </Form.Label>
+    <Form.Control
+      type="email"
+      placeholder="name@example.com"
+      ref={React.createRef<FormControl & HTMLInputElement>()}
+    />
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlSelect1">
     <Form.Label>Example select</Form.Label>
-    <Form.Control as="select">
+    <Form.Control
+      as="select"
+      ref={React.createRef<FormControl<'select'> & HTMLSelectElement>()}
+    >
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -192,7 +209,11 @@ import {
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlTextarea1">
     <Form.Label>Example textarea</Form.Label>
-    <Form.Control as="textarea" rows={3} />
+    <Form.Control
+      as="textarea"
+      rows={3}
+      ref={React.createRef<FormControl<'textarea'> & HTMLTextAreaElement>()}
+    />
   </Form.Group>
   <Form.Group as={Row} controlId="exampleForm.HorizontalControl">
     <Form.Label column sm={2}>
@@ -202,6 +223,34 @@ import {
       <Form.Control type="text" placeholder="Hoizontal" />
     </Col>
   </Form.Group>
+  <Form.Check
+    ref={React.createRef<FormCheck & HTMLInputElement>()}
+    type="checkbox"
+  />
+  <Form.Check
+    ref={React.createRef<FormCheck & HTMLInputElement>()}
+    type="radio"
+  />
+  <Form.Check
+    ref={React.createRef<FormCheck & HTMLInputElement>()}
+    type="switch"
+  />
+  <Form.Check
+    ref={React.createRef<FormCheck & HTMLInputElement>()}
+    type="checkbox"
+  >
+    <FormCheck.Input
+      ref={React.createRef<FormCheckInput & HTMLInputElement>()}
+      type="checkbox"
+    />
+    <FormCheck.Input
+      ref={React.createRef<FormCheckInput & HTMLInputElement>()}
+      type="radio"
+    />
+    <FormCheck.Label
+      ref={React.createRef<FormCheckLabel & HTMLLabelElement>()}
+    />
+  </Form.Check>
 </Form>;
 
 <div>

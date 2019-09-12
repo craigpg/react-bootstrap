@@ -13,7 +13,6 @@ export class FormRow<
 > extends BsPrefixComponent<As> {}
 
 export interface FormProps {
-  innerRef?: React.LegacyRef<this>;
   inline?: boolean;
   validated?: boolean;
 }
