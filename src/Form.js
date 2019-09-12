@@ -17,16 +17,6 @@ const propTypes = {
   bsPrefix: PropTypes.string,
 
   /**
-   * The Form `ref` will be forwarded to the underlying element,
-   * which means, unless it's rendered `as` a composite component,
-   * it will be a DOM node, when resolved.
-   *
-   * @type {ReactRef}
-   * @alias ref
-   */
-  _ref: PropTypes.any,
-
-  /**
    * Display the series of labels, form controls,
    * and buttons on a single horizontal row
    */

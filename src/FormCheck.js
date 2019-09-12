@@ -21,15 +21,6 @@ const propTypes = {
    */
   bsCustomPrefix: PropTypes.string,
 
-  /**
-   * The FormCheck `ref` will be forwarded to the underlying input element,
-   * which means it will be a DOM node, when resolved.
-   *
-   * @type {ReactRef}
-   * @alias ref
-   */
-  _ref: PropTypes.any,
-
   /** A HTML id attribute, necessary for proper form accessibility. */
   id: PropTypes.string,
 

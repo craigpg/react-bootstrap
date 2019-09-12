@@ -25,16 +25,6 @@ const propTypes = {
   column: PropTypes.bool,
 
   /**
-   * The FormLabel `ref` will be forwarded to the underlying element.
-   * Unless the FormLabel is rendered `as` a composite component,
-   * it will be a DOM node, when resolved.
-   *
-   * @type {ReactRef}
-   * @alias ref
-   */
-  _ref: PropTypes.any,
-
-  /**
    * Hides the label visually while still allowing it to be
    * read by assistive technologies.
    */
