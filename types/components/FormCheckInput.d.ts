@@ -8,7 +8,6 @@ export interface FormCheckInputProps {
   isStatic?: boolean;
   isValid?: boolean;
   isInvalid?: boolean;
-  innerRef?: React.LegacyRef<this>;
 }
 
 declare class FormCheckInput extends BsPrefixComponent<

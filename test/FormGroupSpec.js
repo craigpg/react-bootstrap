@@ -41,4 +41,21 @@ describe('<FormGroup>', () => {
     const wrapper = mount(<FormGroup />);
     expect(wrapper.find('div').length).to.equal(1);
   });
+
+  it('should support ref forwarding', () => {
+    class Container extends React.Component {
+      render() {
+        return (
+          <FormGroup
+            ref={ref => {
+              this.input = ref;
+            }}
+          />
+        );
+      }
+    }
+
+    const instance = mount(<Container />).instance();
+    expect(instance.input.tagName).to.equal('DIV');
+  });
 });

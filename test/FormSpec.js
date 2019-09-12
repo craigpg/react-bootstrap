@@ -28,4 +28,21 @@ describe('<Form>', () => {
   it('Should have form as default component', () => {
     mount(<Form />).assertSingle('form');
   });
+
+  it('should support ref forwarding', () => {
+    class Container extends React.Component {
+      render() {
+        return (
+          <Form
+            ref={ref => {
+              this.input = ref;
+            }}
+          />
+        );
+      }
+    }
+
+    const instance = mount(<Container />).instance();
+    expect(instance.input.tagName).to.equal('FORM');
+  });
 });

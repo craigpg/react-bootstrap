@@ -5,7 +5,6 @@ import { BsPrefixComponent } from './helpers';
 
 export interface FormCheckProps {
   bsCustomPrefix?: string;
-  innerRef?: React.LegacyRef<this>;
   id?: string;
   inline?: boolean;
   disabled?: boolean;

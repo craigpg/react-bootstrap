@@ -13,15 +13,6 @@ const propTypes = {
   bsPrefix: PropTypes.string,
 
   /**
-   * The FormControl `ref` will be forwarded to the underlying input element,
-   * which means unless `as` is a composite component,
-   * it will be a DOM node, when resolved.
-   *
-   * @type {ReactRef}
-   * @alias ref
-   */
-  _ref: PropTypes.any,
-  /**
    * Input size variants
    *
    * @type {('sm'|'lg')}
