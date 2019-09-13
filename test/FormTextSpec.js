@@ -27,4 +27,20 @@ describe('<FormText>', () => {
         .hasClass('text-muted'),
     ).to.be.true;
   });
+
+  it('should support ref forwarding', () => {
+    class Container extends React.Component {
+      render() {
+        return (
+          <FormText
+            ref={ref => {
+              this.input = ref;
+            }}
+          />
+        );
+      }
+    }
+    const instance = mount(<Container />).instance();
+    expect(instance.input.tagName).to.equal('SMALL');
+  });
 });
